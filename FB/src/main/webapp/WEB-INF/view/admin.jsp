@@ -1,0 +1,134 @@
+<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+<style type="text/css">
+* {
+	font-family: 'Concert One', cursive;
+	font-size: 30px;
+	max-zoom: calc(100);
+	min-zoom: 10%;
+	overflow-y: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffff;
+}
+
+header {
+	color: #ffff;
+	height: 10vh;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color: #20b2aa;
+}
+
+header {
+	top: 0;
+}
+
+footer {
+    color: #ffff;
+	height: 11vh;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color:#20b2aa;
+	bottom:0px;
+}
+.menu{
+position: absolute;
+}
+.sidenav {
+float:left;
+	height: 505px;
+	width: 259px;
+	position: fixed;
+	bottom:0;
+	left: 0;
+	background-color:#faebd7;
+	padding-top: 100px;
+	top: 10%;
+}
+
+.sidenav a {
+display:block;
+margin-left:10px;
+	text-align:left;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	padding: 0px;
+}
+
+.sidenav a:hover {
+	font-size:25px;
+	border: 1px solid white;
+}
+
+.main {
+margin-left:0275px;
+margin-top:100px;
+position:relative;
+float:right;
+	width:1132px;
+	height: 540px;
+	
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+		
+	}
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>ADMIN</h1>
+	</header>
+
+	<div class="menu">
+		<div class="sidenav">
+			<a style="margin-top: 0px" onclick="add()">View Feedback</a> 
+			<a style="margin-top: 10px" onclick="student()">Create Student</a> 
+			<a style="margin-top: 20px" onclick="staff()">Create Staff</a> 
+		    <a style="margin-top: 30px"onclick="view()">Feedback Analysis</a>
+		</div>
+		<iframe class="main" id="main"></iframe>
+	</div>
+	<footer>
+		<h3>College Name_</h3>
+	</footer>
+
+	<script type="text/javascript">
+		function add() {
+			document.getElementById('main').src ='viewfeedback';
+		}
+		function view() {
+			document.getElementById('main').src ='analysizer';
+		}
+		function student() {
+			document.getElementById('main').src ='createstudent';
+		}
+		function staff() {
+			document.getElementById('main').src ='createstaff';
+		}
+		
+	
+	</script>
+
+
+</body>
+</html>
